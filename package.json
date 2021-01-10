@@ -1,23 +1,69 @@
 {
-  "name": "desktop-application-electron-",
-  "version": "1.0.0",
-  "description": "",
+  "name": "my-electron-app",
+  "version": "0.1.0",
+  "author": "Thiago Messias",
+  "description": "app for MAC / Linux / Windows",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "make-mac": "npx @electron-forge/cli make --platform darwin",
+    "make-linux": "npx @electron-forge/cli make --platform linux --targets deb"
+
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tsmsp/desktop-application-electron-.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tsmsp/desktop-application-electron-/issues"
   },
   "homepage": "https://github.com/tsmsp/desktop-application-electron-#readme",
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "electron": "^11.1.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": " ./build/icon"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "my_electron_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "icon": "./build/icon.png"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
