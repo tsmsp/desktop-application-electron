@@ -1,11 +1,19 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, icon} = require('electron')
+const path = require('path')
+
+
+
+if(require('electron-squirrel-startup')) return;
 
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: path.join(app.getAppPath(), 'build/icon.png'),
     webPreferences: {
-      nodeIntegration: true
+        worldSafeExecuteJavaScript: true,
+        contextIsolation: true,
+        preload: path.join(app.getAppPath(), 'preload.js')
     }
   })
 
@@ -16,7 +24,8 @@ app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    app.quit() // "darwin" targets macOS only.
+    
   }
 })
 
