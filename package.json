@@ -1,0 +1,23 @@
+{
+  "name": "desktop-application-electron-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsmsp/desktop-application-electron-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsmsp/desktop-application-electron-/issues"
+  },
+  "homepage": "https://github.com/tsmsp/desktop-application-electron-#readme",
+  "devDependencies": {
+    "electron": "^11.1.1"
+  }
+}
