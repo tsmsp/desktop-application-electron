@@ -1,6 +1,6 @@
 {
   "name": "my-electron-app",
-  "version": "0.2.0",
+  "version": "0.0.3",
   "author": "Thiago Messias",
   "description": "app for MAC / Linux / Windows",
   "main": "index.js",
@@ -18,8 +18,8 @@
     "type": "git",
     "url": "git+https://github.com/tsmsp/desktop-application-electron-.git"
   },
-  "keywords": [],
-  "license": "ISC",
+  "keywords": ["electron", "app", "desktop", "windows", "mac", "linux" ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tsmsp/desktop-application-electron-/issues"
   },
