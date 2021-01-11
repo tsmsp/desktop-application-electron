@@ -6,7 +6,7 @@ Install
 -------
 
 ```
-npm install electron-pdf
+npm i my-electron-app
 ```
 
 Run on Mac OS 
