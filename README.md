@@ -26,8 +26,9 @@ Run on Windows
 ```
 npm run make
 ```
+### NPM
 
-[npm-url]: https://www.npmjs.com/package/my-electron-app
+https://www.npmjs.com/package/my-electron-app
 
 ### License
 
