@@ -27,6 +27,8 @@ Run on Windows
 npm run make
 ```
 
+[npm-url]: https://www.npmjs.com/package/my-electron-app
+
 ### License
 
 MIT
