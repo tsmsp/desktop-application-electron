@@ -1,6 +1,6 @@
 {
   "name": "my-electron-app",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "author": "Thiago Messias",
   "description": "app for MAC / Linux / Windows",
   "main": "index.js",
